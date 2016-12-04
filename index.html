@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Linear algebra project</title>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+             tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+         });
+         </script>
+        <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Transposing a matrix</h1>
+            </div>
+            <div id="content">
+                <form method="post" action="/">
+                  <label for="matrix">Please enter matrix:</label><br />
+                  <textarea name="matrix" rows="5">{% if new_matrix is defined %}{{matrix}}{% endif %}</textarea><br />
+                  <input type="submit" />
+                </form>
+            </div>
+            {% if new_matrix is defined %}
+                <p>Transpose matrix: {{new_matrix}}</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
